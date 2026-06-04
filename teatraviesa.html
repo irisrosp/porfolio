@@ -24,15 +24,15 @@
             position: relative;
         }
 
-        /* MARCA DE AGUA */
+        /* MARCA DE AGUA - IGUAL QUE LA PRINCIPAL (PEQUEÑA) */
         .watermark {
             position: fixed;
             top: 20px;
             right: 20px;
             background: rgba(255, 255, 255, 0.15);
             color: rgba(255, 255, 255, 0.6);
-            font-size: 14px;
-            padding: 10px 18px;
+            font-size: 9px;
+            padding: 6px 12px;
             border-radius: 30px;
             backdrop-filter: blur(5px);
             font-family: monospace;
@@ -40,6 +40,7 @@
             pointer-events: none;
             letter-spacing: 0.5px;
             text-align: right;
+            font-weight: normal;
         }
 
         .container {
@@ -63,48 +64,44 @@
             line-height: 1.4;
         }
 
-        /* Contenedor de la imagen (para mantener la animación) */
-        .image-container {
+        /* CONTENEDOR QUE AGRUPA IMAGEN + TEXTO CLICKEABLE (TODO JUNTO) */
+        .clickable-wrapper {
             display: inline-block;
+            cursor: pointer;
             margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .clickable-wrapper:hover {
+            opacity: 0.75;
+            transform: scale(1.02);
         }
 
         .clickable-img {
-            cursor: pointer;
             max-width: 80%;
             max-height: 280px;
             width: auto;
             height: auto;
             border: 2px solid white;
-            transition: all 0.3s ease;
             object-fit: contain;
+            display: block;
+            margin: 0 auto;
         }
 
-        .clickable-img:hover {
-            opacity: 0.75;
-            transform: scale(1.02);
-            filter: brightness(0.9);
-        }
-
-        /* TEXTO CLICKEABLE CON LA MISMA ANIMACIÓN */
         .clickable-text {
-            display: inline-block;
-            cursor: pointer;
             font-size: 14px;
             color: #ccc;
             font-family: monospace;
-            margin-top: 5px;
-            margin-bottom: 20px;
+            margin-top: 12px;
             text-decoration: none;
             border-bottom: 1px dashed #666;
-            transition: all 0.3s ease;
+            display: inline-block;
             letter-spacing: 0.5px;
         }
 
-        .clickable-text:hover {
+        /* Al hacer hover en el wrapper, el texto también cambia */
+        .clickable-wrapper:hover .clickable-text {
             color: white;
-            opacity: 0.75;
-            transform: scale(1.02);
             border-bottom-color: white;
             letter-spacing: 1px;
         }
@@ -161,19 +158,20 @@
                 font-size: 13px;
             }
             .watermark {
-                font-size: 10px;
-                padding: 6px 12px;
+                font-size: 8px;
+                padding: 4px 8px;
                 top: 10px;
                 right: 10px;
             }
             .clickable-text {
-                font-size: 12px;
+                font-size: 11px;
             }
         }
     </style>
 </head>
 <body>
 
+    <!-- MARCA DE AGUA PEQUEÑA -->
     <div class="watermark">
         Iris Ros Páramo | Graduada en Lengua y Literaturas Hispánicas • Máster en Estética Contemporánea
     </div>
@@ -186,19 +184,11 @@
             sin.: traspasar, penetrar, perforar, espetar, ensartar, engarzar, hender, horadar, barrenar, clavar, pinchar, calar2, entrar, agujerear, bandear2.
         </div>
 
-        <!-- Imagen clickable -->
-        <div class="image-container">
-            <a href="https://irisrosp.github.io/TEAtraviesaproyecto/" target="_blank">
-                <img src="TEAtraviesaejemplo.png.png" alt="TEAtraviesa" class="clickable-img">
-            </a>
-        </div>
-
-        <!-- TEXTO CLICKEABLE CON LA MISMA ANIMACIÓN QUE LA IMAGEN -->
-        <div>
-            <a href="https://irisrosp.github.io/TEAtraviesaproyecto/" target="_blank" class="clickable-text">
-                ✦ Haz click para acceder a TEAtraviesa net.art ✦
-            </a>
-        </div>
+        <!-- TODO EL CONTENIDO CLICKEABLE (IMAGEN + TEXTO) DENTRO DEL MISMO WRAPPER -->
+        <a href="https://irisrosp.github.io/TEAtraviesaproyecto/" target="_blank" class="clickable-wrapper">
+            <img src="TEAtraviesaejemplo.png.png" alt="TEAtraviesa" class="clickable-img">
+            <div class="clickable-text">✦ Haz click para acceder a TEAtraviesa net.art ✦</div>
+        </a>
 
         <div class="description">
             <p>Se da nombre a una creación artística sobre estéticas de la discapacidad que encuentra sentido de ser combinando diversos formatos: art.net, collage, videoarte... No es resultado de unos minutos de prueba y error con la combinación del acrónimo Trastorno del Espectro Autista junto a cualquier otra palabra. Es, de hecho, muy consciente de sí mismo, pues actúa como juego lingüístico que privilegia el cuerpo (como se tiene que luchar dentro de un orden capacitista que niega la agencia de las personas neurodivergentes), ya que atravesar es literalmente: "tr. Pasar un cuerpo penetrándolo de parte a parte".</p>
