@@ -46,16 +46,16 @@
             line-height: 1.4;
         }
 
-        /* Imagen más pequeña y con límite de altura */
+        /* Imagen MÁS GRANDE: aumentado max-width y max-height */
         .clickable-img {
             cursor: pointer;
-            max-width: 80%;
-            max-height: 280px;
+            max-width: 90%;        /* Antes 80% */
+            max-height: 450px;     /* Antes 280px */
             width: auto;
             height: auto;
             border: 2px solid white;
             transition: 0.2s;
-            margin-bottom: 20px;
+            margin-bottom: 30px;   /* Un poco más de separación inferior */
             object-fit: contain;
         }
 
@@ -113,7 +113,7 @@
             }
             .clickable-img {
                 max-width: 95%;
-                max-height: 200px;
+                max-height: 300px;   /* También más grande en móvil */
             }
             .description {
                 font-size: 13px;
