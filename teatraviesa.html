@@ -24,24 +24,24 @@
             position: relative;
         }
 
-        /* MARCA DE AGUA - IDÉNTICA A LA DE index.html */
+        /* MARCA DE AGUA - IGUAL QUE INDEX */
         .watermark {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: rgba(255, 255, 255, 0.15);
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 9px;
-            padding: 6px 12px;
-            border-radius: 30px;
-            backdrop-filter: blur(5px);
-            font-family: monospace;
-            z-index: 999;
-            pointer-events: none;
-            letter-spacing: 0.5px;
-            text-align: right;
-            font-weight: normal;
-        }
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 9px;  /* antes 10px */
+    padding: 6x 12px;  /* antes 6px 12px */
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+    font-family: monospace;
+    z-index: 999;
+    pointer-events: none;
+    letter-spacing: 0.5px;
+    text-align: right;
+    font-weight: normal;
+}
 
         .container {
             max-width: 750px;
@@ -64,7 +64,7 @@
             line-height: 1.4;
         }
 
-        /* LA IMAGEN COMO ESTABA AL PRINCIPIO (SIN COMPLICACIONES) */
+        /* SOLO LA IMAGEN */
         .clickable-img {
             cursor: pointer;
             max-width: 80%;
@@ -73,7 +73,7 @@
             height: auto;
             border: 2px solid white;
             transition: 0.2s;
-            margin-bottom: 5px;
+            margin-bottom: 0;
             object-fit: contain;
         }
 
@@ -86,7 +86,7 @@
             text-align: justify;
             font-size: 14px;
             line-height: 1.5;
-            margin-top: 15px;
+            margin-top: 20px;
             max-width: 750px;
             margin-left: auto;
             margin-right: auto;
@@ -138,7 +138,6 @@
 </head>
 <body>
 
-    <!-- MARCA DE AGUA -->
     <div class="watermark">
         Iris Ros Páramo | Graduada en Lengua y Literaturas Hispánicas • Máster en Estética Contemporánea
     </div>
@@ -157,7 +156,7 @@
         </a>
 
         <div class="description">
-            <p>Con TEAtraviesa se da nombre a una creación artística sobre estéticas de la discapacidad que encuentra sentido de ser combinando diversos formatos: art.net, collage, videoarte... No es resultado de unos minutos de prueba y error con la combinación del acrónimo Trastorno del Espectro Autista junto a cualquier otra palabra. Es, de hecho, muy consciente de sí mismo, pues actúa como juego lingüístico que privilegia el cuerpo (como se tiene que luchar dentro de un orden capacitista que niega la agencia de las personas neurodivergentes), ya que atravesar es literalmente: "tr. Pasar un cuerpo penetrándolo de parte a parte".</p>
+            <p>Con "TEAtraviesa" se da nombre a una creación artística sobre estéticas de la discapacidad que encuentra sentido de ser combinando diversos formatos: art.net, collage, videoarte... No es resultado de unos minutos de prueba y error con la combinación del acrónimo Trastorno del Espectro Autista junto a cualquier otra palabra. Es, de hecho, muy consciente de sí mismo, pues actúa como juego lingüístico que privilegia el cuerpo (como se tiene que luchar dentro de un orden capacitista que niega la agencia de las personas neurodivergentes), ya que atravesar es literalmente: "tr. Pasar un cuerpo penetrándolo de parte a parte".</p>
 
             <p>Y es que la experiencia de ser un sujeto autista en el mundo nos atraviesa a los neurodivergentes porque nos constituye como sujetos y nos penetra, con todas esas acepciones violentas que puede llegar a tener "atravesar" (perforar, pinchar, hender, etc.), ya que, como se ha desplegado, existen una norma neurotípica y una serie de violencias que interpelan al sujeto discapacitado: el autismo es una forma de habitar la percepción.</p>
 
