@@ -4,30 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>TEAtraviesa — Sobre neurodivergencia</title>
-    <!-- Usamos el MISMO style.css que index.html -->
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #111;
+            color: #eee;
+            font-family: Georgia, serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 30px 20px;
+            position: relative;
+ 
+        .container {
+            max-width: 750px;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .titulo {
+            font-style: italic;
+            font-size: 1.8em;
+            margin-bottom: 8px;
+        }
+
+        .subtitulo {
+            font-size: 11px;
+            color: #aaa;
+            margin-bottom: 20px;
+            font-family: monospace;
+            line-height: 1.4;
+        }
+
+        /* SOLO LA IMAGEN, SIN TEXTO DEBAJO */
+        .clickable-img {
+            cursor: pointer;
+            max-width: 80%;
+            max-height: 280px;
+            width: auto;
+            height: auto;
+            border: 2px solid white;
+            transition: 0.2s;
+            margin-bottom: 0;
+            object-fit: contain;
+        }
+
+        .clickable-img:hover {
+            opacity: 0.8;
+            transform: scale(1.01);
+        }
+
+        .description {
+            text-align: justify;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-top: 20px;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .description p {
+            margin-bottom: 14px;
+        }
+
+        hr {
+            margin: 25px 0;
+            border-color: #333;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            color: #aaa;
+            text-decoration: none;
+            font-family: monospace;
+            font-size: 13px;
+            transition: 0.2s;
+        }
+
+        .back-link:hover {
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+            .titulo {
+                font-size: 1.4em;
+            }
+            .clickable-img {
+                max-width: 95%;
+                max-height: 200px;
+            }
+            .description {
+                font-size: 13px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- MISMA MARCA DE AGUA QUE EN INDEX -->
     <div class="watermark">
         Iris Ros Páramo | Graduada en Lengua y Literaturas Hispánicas • Máster en Estética Contemporánea
     </div>
 
-    <div class="project-container">
+    <div class="container">
         
-        <h1 class="project-titulo">TEAtraviesa</h1>
+        <h1 class="titulo">TEAtraviesa</h1>
         
-        <div class="project-subtitulo">
+        <div class="subtitulo">
             sin.: traspasar, penetrar, perforar, espetar, ensartar, engarzar, hender, horadar, barrenar, clavar, pinchar, calar2, entrar, agujerear, bandear2.
         </div>
 
+        <!-- SOLO LA IMAGEN. NADA MÁS. -->
         <a href="https://irisrosp.github.io/TEAtraviesaproyecto/" target="_blank">
-            <img src="TEAtraviesaejemplo.png.png" alt="TEAtraviesa" class="project-img">
+            <img src="TEAtraviesaejemplo.png.png" alt="TEAtraviesa" class="clickable-img">
         </a>
 
-        <div class="project-description">
-            <p>Con TEAtraviesa se da nombre a una creación artística sobre estéticas de la discapacidad que encuentra sentido de ser combinando diversos formatos: art.net, collage, videoarte... No es resultado de unos minutos de prueba y error con la combinación del acrónimo Trastorno del Espectro Autista junto a cualquier otra palabra. Es, de hecho, muy consciente de sí mismo, pues actúa como juego lingüístico que privilegia el cuerpo (como se tiene que luchar dentro de un orden capacitista que niega la agencia de las personas neurodivergentes), ya que atravesar es literalmente: "tr. Pasar un cuerpo penetrándolo de parte a parte".</p>
+        <div class="description">
+            <p>Se da nombre a una creación artística sobre estéticas de la discapacidad que encuentra sentido de ser combinando diversos formatos: art.net, collage, videoarte... No es resultado de unos minutos de prueba y error con la combinación del acrónimo Trastorno del Espectro Autista junto a cualquier otra palabra. Es, de hecho, muy consciente de sí mismo, pues actúa como juego lingüístico que privilegia el cuerpo (como se tiene que luchar dentro de un orden capacitista que niega la agencia de las personas neurodivergentes), ya que atravesar es literalmente: "tr. Pasar un cuerpo penetrándolo de parte a parte".</p>
 
             <p>Y es que la experiencia de ser un sujeto autista en el mundo nos atraviesa a los neurodivergentes porque nos constituye como sujetos y nos penetra, con todas esas acepciones violentas que puede llegar a tener "atravesar" (perforar, pinchar, hender, etc.), ya que, como se ha desplegado, existen una norma neurotípica y una serie de violencias que interpelan al sujeto discapacitado: el autismo es una forma de habitar la percepción.</p>
 
@@ -38,10 +147,9 @@
             <p>Siendo todo esto así, este título condensa una narración biográfica de las condiciones estructurales (violencias, norma, etc.) de un mundo posmoderno (es decir, con aún la tarea pendiente de la liberación) a través de un significado concreto que se relaciona de una forma estupenda con toda esa hiperanalítica que se mencionaba anteriormente sobre cómo registra la existencia un cerebro dentro del espectro autista: atravesar tiene múltiples significados, como casi todos los términos de cualquier lengua, con lo que la imagen léxica es un recurso muy bueno; pues dispone del significado convencional (que está "fijado" por un sistema descriptivo, la norma lingüística que utiliza como código al órgano de la Real Academia Española) y toda una codificación de sinónimos que amplían casi hasta el agotamiento del término inicial (y por ello se incluyen intencionadamente en el título todos estos sinónimos de la acepción escogida).</p>
         </div>
 
-        <hr class="project-hr">
+        <hr>
 
         <a href="index.html" class="back-link">← Volver al portfolio</a>
     </div>
-
 </body>
 </html>
