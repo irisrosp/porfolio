@@ -21,6 +21,25 @@
             min-height: 100vh;
             margin: 0;
             padding: 30px 20px;
+            position: relative;
+        }
+
+        /* MARCA DE AGUA */
+        .watermark {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+            padding: 10px 18px;
+            border-radius: 30px;
+            backdrop-filter: blur(5px);
+            font-family: monospace;
+            z-index: 999;
+            pointer-events: none;
+            letter-spacing: 0.5px;
+            text-align: right;
         }
 
         .container {
@@ -30,14 +49,12 @@
             text-align: center;
         }
 
-        /* Título más pequeño */
         .titulo {
             font-style: italic;
             font-size: 1.8em;
             margin-bottom: 8px;
         }
 
-        /* Subtítulo más compacto */
         .subtitulo {
             font-size: 11px;
             color: #aaa;
@@ -46,7 +63,12 @@
             line-height: 1.4;
         }
 
-        /* Imagen más pequeña y con límite de altura */
+        /* Contenedor de la imagen (para mantener la animación) */
+        .image-container {
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
         .clickable-img {
             cursor: pointer;
             max-width: 80%;
@@ -54,17 +76,39 @@
             width: auto;
             height: auto;
             border: 2px solid white;
-            transition: 0.2s;
-            margin-bottom: 20px;
+            transition: all 0.3s ease;
             object-fit: contain;
         }
 
         .clickable-img:hover {
-            opacity: 0.8;
-            transform: scale(1.01);
+            opacity: 0.75;
+            transform: scale(1.02);
+            filter: brightness(0.9);
         }
 
-        /* Texto más compacto y legible */
+        /* TEXTO CLICKEABLE CON LA MISMA ANIMACIÓN */
+        .clickable-text {
+            display: inline-block;
+            cursor: pointer;
+            font-size: 14px;
+            color: #ccc;
+            font-family: monospace;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            text-decoration: none;
+            border-bottom: 1px dashed #666;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+
+        .clickable-text:hover {
+            color: white;
+            opacity: 0.75;
+            transform: scale(1.02);
+            border-bottom-color: white;
+            letter-spacing: 1px;
+        }
+
         .description {
             text-align: justify;
             font-size: 14px;
@@ -79,7 +123,6 @@
             margin-bottom: 14px;
         }
 
-        /* Línea separadora */
         hr {
             margin: 25px 0;
             border-color: #333;
@@ -88,7 +131,6 @@
             margin-right: auto;
         }
 
-        /* Enlace de vuelta */
         .back-link {
             display: inline-block;
             margin-top: 10px;
@@ -97,13 +139,13 @@
             text-decoration: none;
             font-family: monospace;
             font-size: 13px;
+            transition: 0.2s;
         }
 
         .back-link:hover {
             color: white;
         }
 
-        /* Ajustes para móviles */
         @media (max-width: 600px) {
             body {
                 padding: 15px;
@@ -118,10 +160,24 @@
             .description {
                 font-size: 13px;
             }
+            .watermark {
+                font-size: 10px;
+                padding: 6px 12px;
+                top: 10px;
+                right: 10px;
+            }
+            .clickable-text {
+                font-size: 12px;
+            }
         }
     </style>
 </head>
 <body>
+
+    <div class="watermark">
+        Iris Ros Páramo | Graduada en Lengua y Literaturas Hispánicas • Máster en Estética Contemporánea
+    </div>
+
     <div class="container">
         
         <h1 class="titulo">TEAtraviesa</h1>
@@ -130,10 +186,19 @@
             sin.: traspasar, penetrar, perforar, espetar, ensartar, engarzar, hender, horadar, barrenar, clavar, pinchar, calar2, entrar, agujerear, bandear2.
         </div>
 
-        <!-- Foto clickable -->
-        <a href="https://irisrosp.github.io/TEAtraviesaproyecto/" target="_blank">
-            <img src="TEAtraviesaejemplo.png.png" alt="TEAtraviesa" class="clickable-img">
-        </a>
+        <!-- Imagen clickable -->
+        <div class="image-container">
+            <a href="https://irisrosp.github.io/TEAtraviesaproyecto/" target="_blank">
+                <img src="TEAtraviesaejemplo.png.png" alt="TEAtraviesa" class="clickable-img">
+            </a>
+        </div>
+
+        <!-- TEXTO CLICKEABLE CON LA MISMA ANIMACIÓN QUE LA IMAGEN -->
+        <div>
+            <a href="https://irisrosp.github.io/TEAtraviesaproyecto/" target="_blank" class="clickable-text">
+                ✦ Haz click para acceder a TEAtraviesa net.art ✦
+            </a>
+        </div>
 
         <div class="description">
             <p>Se da nombre a una creación artística sobre estéticas de la discapacidad que encuentra sentido de ser combinando diversos formatos: art.net, collage, videoarte... No es resultado de unos minutos de prueba y error con la combinación del acrónimo Trastorno del Espectro Autista junto a cualquier otra palabra. Es, de hecho, muy consciente de sí mismo, pues actúa como juego lingüístico que privilegia el cuerpo (como se tiene que luchar dentro de un orden capacitista que niega la agencia de las personas neurodivergentes), ya que atravesar es literalmente: "tr. Pasar un cuerpo penetrándolo de parte a parte".</p>
